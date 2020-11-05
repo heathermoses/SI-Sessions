@@ -6,6 +6,8 @@ Session 11 B
 # Make a class for a car with at least 5 fields
 # Set default values for 3 of your fields
 class Car:
+    __slots__ = ["name", "door_num", "color", "eng_type", "max_speed"]
+
     def __init__(self, name="Car", door_num=4, color="red", eng_type="strong", max_speed=100):
         self.name = name
         self.door_num = door_num
@@ -14,12 +16,12 @@ class Car:
         self.max_speed = max_speed
 
 
-
 def print_class(carobject):
     """
     This function takes a Car object and prints out all variables on one line
     """
     print("Name: ", carobject.name, "\tNum of doors: ", carobject.door_num, "\tColor: ", carobject.color, "\tEngine type: ", carobject.eng_type, "\tMax Speed: ", carobject.max_speed)
+
 
 def main():
     # Make an instance of a car with the default values
